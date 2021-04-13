@@ -1,0 +1,17 @@
+<div class="todos-container">
+  <div class="list-container">
+    <app-todo-list [todos]="todos"></app-todo-list>
+  </div>
+  <div class="todo-container">
+    <app-todo [todo]="todo"></app-todo>
+  </div>
+
+  <button
+    (click)="openDialog()"
+    class="add-new-todo-btn"
+    mat-raised-button 
+    color="primary"
+  >
+    Add
+  </button>
+</div>

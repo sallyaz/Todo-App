@@ -1,0 +1,11 @@
+::ng-deep {
+  mat-card {
+    height: calc(100% - 40px);
+  }
+}
+
+.check-all-todo-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}

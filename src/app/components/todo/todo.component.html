@@ -1,0 +1,22 @@
+<mat-card class="todo-card" *ngIf="todo && !todo.isArchived">
+  <mat-card-header>
+    <mat-card-title>{{ todo.title }}</mat-card-title>
+    <mat-card-subtitle>{{ todo.description }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-actions>
+    <button *ngIf="todo.isCompleted"  mat-raised-button color="primary" (click)="undoComplete(todo)">
+      <span >Undo</span>
+    </button>
+    <button *ngIf="!todo.isCompleted"  mat-raised-button color="primary" (click)="onCompleteTodo(todo)">
+      <span >Complete</span>
+    </button>
+    <button mat-raised-button color="warn" (click)="onArchiveTodo()">
+      Archive
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<button class="check-all-todo-btn" mat-raised-button color="primary" (click)="checkAllToDos(todo)" >
+  Check everything, I need a beer
+</button>
