@@ -43,7 +43,6 @@ export class TodoService {
     //take exiting todos
     //add new todo to exiting todos
     //trigger next tic in observable;
-    console.log(newTodo);
     const existingTodos: Array<ITodo> = this._todoSubject.value;
     existingTodos.push(newTodo);
     this._todoSubject.next(existingTodos);
